@@ -82,7 +82,7 @@ def main():
             except ImportError:
                 dependencies.mkdir(parents=True, exist_ok=True)
                 try:
-                    subprocess.run([sys.executable, "-m", "pip", "install", "--upgrade", "--target", str(dependencies), "faster-whisper"], check=True)
+                    subprocess.run([sys.executable, "-m", "pip", "install", "--upgrade", "--target", str(dependencies), "faster-whisper", "av<17"], check=True)
                     from faster_whisper import WhisperModel
                 except (subprocess.CalledProcessError, ImportError) as exc:
                     parser.exit(1, f"Could not install audio transcription dependencies: {exc}\n")
