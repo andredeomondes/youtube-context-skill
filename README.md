@@ -8,6 +8,14 @@ An Agent Skills-compatible skill that extracts YouTube video metadata and captio
 
 ### Installation
 
+With Node.js 22.20 or later, install the skill and choose your agents interactively:
+
+```sh
+npx skills add andredeomondes/youtube-context-skill
+```
+
+The repository is private, so GitHub access and Git authentication are required. Add `-g` to install for all projects. Python 3.9 or later with pip is required to run the extractor.
+
 Install Python 3.9 or later with pip. Download this repository and run `python install.py --agent all` from the repository directory. Use `python3` if needed. To install for one agent, choose `--agent codex`, `--agent opencode`, or `--agent claude`. Add `--force` to update an existing installation. Restart the agent afterward.
 
 If yt-dlp is missing, it is installed automatically in the user cache on first use. Installation requires pip and an internet connection. Python must already be installed. When captions are unavailable, the agent can run the script with `--transcribe-audio`. This also installs faster-whisper and downloads its speech model on first use. Processing runs on your computer and can take time.
@@ -23,6 +31,14 @@ Run the extractor directly with `python skills/youtube-context/scripts/extract.p
 Uma skill para transformar um vídeo do YouTube em contexto consultável em Markdown e responder perguntas com base na transcrição.
 
 ### Instalação
+
+Com Node.js 22.20 ou superior, instale a skill e escolha os agentes interativamente:
+
+```sh
+npx skills add andredeomondes/youtube-context-skill
+```
+
+O repositório é privado, então é necessário ter acesso no GitHub e autenticação no Git. Adicione `-g` para instalar em todos os projetos. Para executar o extrator, é necessário Python 3.9 ou superior com pip.
 
 Instale Python 3.9 ou superior com pip. Baixe este repositório e, na pasta dele, execute `python install.py --agent all`. Use `python3` se necessário. Para instalar individualmente, escolha `--agent codex`, `--agent opencode` ou `--agent claude`. Para atualizar uma instalação existente, acrescente `--force`. Reinicie o agente depois da instalação.
 
