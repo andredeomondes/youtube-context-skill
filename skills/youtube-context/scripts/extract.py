@@ -75,12 +75,12 @@ def main():
                     previous = content
         audio_source = False
         if (not lines and args.transcribe_audio) or args.force_audio:
+            dependencies = Path.home() / ".cache" / "youtube-context" / "python" / f"{sys.version_info.major}.{sys.version_info.minor}"
+            sys.path.insert(0, str(dependencies))
             try:
                 from faster_whisper import WhisperModel
             except ImportError:
-                dependencies = Path.home() / ".cache" / "youtube-context" / "python" / f"{sys.version_info.major}.{sys.version_info.minor}"
                 dependencies.mkdir(parents=True, exist_ok=True)
-                sys.path.insert(0, str(dependencies))
                 try:
                     subprocess.run([sys.executable, "-m", "pip", "install", "--upgrade", "--target", str(dependencies), "faster-whisper"], check=True)
                     from faster_whisper import WhisperModel
