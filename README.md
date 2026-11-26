@@ -22,6 +22,24 @@ If yt-dlp is missing, it is installed automatically in the user cache on first u
 
 The skill follows the Agent Skills format. The installer supports Codex, OpenCode, and Claude Code. ChatGPT support and script execution depend on the available integration and environment. The local installer does not install a skill in your ChatGPT account.
 
+### How to use
+
+After installing the skill, restart your agent and invoke it with a video link.
+
+In Codex:
+
+```text
+$youtube-context https://www.youtube.com/watch?v=VIDEO_ID
+```
+
+In Claude Code:
+
+```text
+/youtube-context https://www.youtube.com/watch?v=VIDEO_ID
+```
+
+The skill extracts and structures the video content into a Markdown file with an index, timestamps, and context organized for AI-assisted research.
+
 Send a YouTube link and request an analysis. The skill retrieves available metadata and captions and creates Markdown with an index, timestamps, and a topic map. The agent adds a summary grounded in the transcript. Automatic captions may contain errors. If captions are unavailable, the skill reports the limitation.
 
 Run the extractor directly with `python skills/youtube-context/scripts/extract.py URL --output video.md --language pt`.
@@ -45,6 +63,24 @@ Instale Python 3.9 ou superior com pip. Baixe este repositório e, na pasta dele
 O yt-dlp é instalado automaticamente num cache do usuário na primeira execução, se estiver ausente. A instalação exige internet e pip. O Python precisa estar instalado previamente. Quando não houver legendas, o agente pode executar o script com `--transcribe-audio`. Nessa opção, instala-se também o faster-whisper e baixa-se o modelo de fala na primeira execução. O processamento acontece no computador e pode demorar.
 
 O formato segue o padrão Agent Skills. O instalador atende Codex, OpenCode e Claude Code. A instalação no ChatGPT e a execução de scripts dependem da integração e do ambiente disponíveis, e não são feitas pelo instalador local.
+
+### Como usar
+
+Após instalar a skill, reinicie seu agente e invoque-a passando o link do vídeo.
+
+No Codex:
+
+```text
+$youtube-context https://www.youtube.com/watch?v=VIDEO_ID
+```
+
+No Claude Code:
+
+```text
+/youtube-context https://www.youtube.com/watch?v=VIDEO_ID
+```
+
+A skill irá extrair e estruturar o conteúdo do vídeo em um arquivo Markdown, com índices, timestamps e contexto organizado para consultas eficientes pela IA.
 
 Envie um link do YouTube e peça uma análise. A skill busca metadados e legendas disponíveis e cria um arquivo Markdown com índice, tempos e um mapa dos assuntos. O agente acrescenta um resumo fundamentado na transcrição. Legendas automáticas podem conter erros. Quando o YouTube não disponibiliza legendas, a skill informa a limitação.
 
