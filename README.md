@@ -14,7 +14,7 @@ With Node.js 22.20 or later, install the skill and choose your agents interactiv
 npx skills add andredeomondes/youtube-context-skill
 ```
 
-The repository is private, so GitHub access and Git authentication are required. Add `-g` to install for all projects. Python 3.9 or later with pip is required to run the extractor.
+Add `-g` to install for all projects. Python 3.9 or later with pip is required to run the extractor.
 
 Install Python 3.9 or later with pip. Download this repository and run `python install.py --agent all` from the repository directory. Use `python3` if needed. To install for one agent, choose `--agent codex`, `--agent opencode`, or `--agent claude`. Add `--force` to update an existing installation. Restart the agent afterward.
 
@@ -38,7 +38,7 @@ Com Node.js 22.20 ou superior, instale a skill e escolha os agentes interativame
 npx skills add andredeomondes/youtube-context-skill
 ```
 
-O repositório é privado, então é necessário ter acesso no GitHub e autenticação no Git. Adicione `-g` para instalar em todos os projetos. Para executar o extrator, é necessário Python 3.9 ou superior com pip.
+Adicione `-g` para instalar em todos os projetos. Para executar o extrator, é necessário Python 3.9 ou superior com pip.
 
 Instale Python 3.9 ou superior com pip. Baixe este repositório e, na pasta dele, execute `python install.py --agent all`. Use `python3` se necessário. Para instalar individualmente, escolha `--agent codex`, `--agent opencode` ou `--agent claude`. Para atualizar uma instalação existente, acrescente `--force`. Reinicie o agente depois da instalação.
 
