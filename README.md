@@ -1,3 +1,5 @@
+![YouTube Context Skill: vídeo, transcrição e extração de contexto](assets/banner.png)
+
 # YouTube Context
 
 Uma skill para transformar um vídeo do YouTube em contexto consultável em Markdown e responder perguntas com base na transcrição.
