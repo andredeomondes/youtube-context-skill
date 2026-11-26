@@ -40,7 +40,7 @@ In Claude Code:
 
 The skill extracts and structures the video content into a Markdown file with an index, timestamps, and context organized for AI-assisted research.
 
-Send a YouTube link and request an analysis. The skill retrieves available metadata and captions and creates Markdown with an index, timestamps, and a topic map. The agent adds a summary grounded in the transcript. Automatic captions may contain errors. If captions are unavailable, the skill reports the limitation.
+Send a YouTube link and request an analysis. The skill retrieves available metadata and captions and creates Markdown with an index, timestamps, and a topic map. The agent adds a summary grounded in the transcript. Automatic captions and audio transcripts may contain errors, particularly in technical terms. If transcription fails, the skill reports the limitation.
 
 Run the extractor directly with `python skills/youtube-context/scripts/extract.py URL --output video.md --language pt`.
 
@@ -82,6 +82,6 @@ No Claude Code:
 
 A skill irá extrair e estruturar o conteúdo do vídeo em um arquivo Markdown, com índices, timestamps e contexto organizado para consultas eficientes pela IA.
 
-Envie um link do YouTube e peça uma análise. A skill busca metadados e legendas disponíveis e cria um arquivo Markdown com índice, tempos e um mapa dos assuntos. O agente acrescenta um resumo fundamentado na transcrição. Legendas automáticas podem conter erros. Quando o YouTube não disponibiliza legendas, a skill informa a limitação.
+Envie um link do YouTube e peça uma análise. A skill busca metadados e legendas disponíveis e cria um arquivo Markdown com índice, tempos e um mapa dos assuntos. O agente acrescenta um resumo fundamentado na transcrição. Legendas e transcrições automáticas podem conter erros, especialmente em termos técnicos. Se a transcrição falhar, a skill informa a limitação.
 
 Para usar o extrator diretamente, execute `python skills/youtube-context/scripts/extract.py URL --output video.md --language pt`.
